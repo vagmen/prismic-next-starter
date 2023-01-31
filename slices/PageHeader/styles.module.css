@@ -1,0 +1,13 @@
+.section {
+  margin: var(--gap-xxxl) var(--page-padding);
+  text-align: center;
+}
+
+.title {
+  margin-bottom: var(--gap-xl);
+  display: block;
+}
+
+.description {
+  font-size: var(--font-size-l);
+}

@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 8px;
+  margin: 8px;
+}
+
+.nav {
+  border-radius: 40px;
+  box-shadow: var(--md-sys-elevation-1);
+  width: auto;
+  background: var(--md-sys-color-background);
+}
+
+.ul {
+  display: flex;
+  border-radius: 40px;
+  justify-content: center;
+  background: var(--md-sys-color-surface-1);
+}
