@@ -10,10 +10,15 @@ import classNames from "classnames";
  * @param { ImageTextButtonsTwoColsProps }
  */
 const ImageTextButtonsTwoCols = ({ slice }) => {
+  const withTopMargin =
+    slice.primary.title &&
+    slice.primary.title[0] &&
+    slice.primary.title[0].type === "heading1";
   return (
     <section
       className={classNames(styles.section, {
         [styles.revers]: slice.variation === "leftImageTextButtonsTwoCols",
+        [styles.topMargin]: withTopMargin,
       })}
     >
       {/* <div className={styles.container}> */}

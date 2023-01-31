@@ -14,10 +14,10 @@
         "title": {
           "type": "StructuredText",
           "config": {
-            "label": "Title",
-            "placeholder": "This is where it all begins...",
+            "label": "Заголовок",
+            "placeholder": "Выбирайте h1 или h2",
             "allowTargetBlank": true,
-            "single": "heading2"
+            "single": "heading2,heading1"
           }
         },
         "description": {

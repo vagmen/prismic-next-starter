@@ -9,10 +9,8 @@
           {
             "type": "heading2",
             "content": {
-              "text": "Заголовок",
-              "spans": []
-            },
-            "direction": "ltr"
+              "text": "Shadow"
+            }
           }
         ]
       },

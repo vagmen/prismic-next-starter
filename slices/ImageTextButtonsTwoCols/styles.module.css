@@ -14,6 +14,10 @@
   direction: rtl;
 }
 
+.topMargin {
+  margin-top: calc(var(--section-gap) * 2);
+}
+
 .revers > * {
   grid-auto-flow: dense;
   direction: ltr;
@@ -49,6 +53,9 @@
   .section {
     grid-template-columns: 1fr 1fr;
     gap: var(--gap-l);
+  }
+  .topMargin {
+    margin-top: var(--section-gap);
   }
 }
 
