@@ -12,10 +12,10 @@ interface INavItem {
 export const NavItem = ({ title, link, active = false, href }: INavItem) => {
   return (
     <li className={styles.navItem}>
-      <PrismicLink document={href}>My Link</PrismicLink>
-      {/* <Link href={link || "/"}>
+      {/* <PrismicLink document={href}>My Link</PrismicLink> */}
+      <Link href={link || "/"}>
         <span className={styles.a}>{title}</span>
-      </Link> */}
+      </Link>
     </li>
   );
 };

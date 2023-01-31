@@ -24,7 +24,7 @@ const ImageWithCaption = ({ slice }) => (
     <PrismicNextImage
       field={slice.primary.image}
       className={styles.image}
-      imgixParams={{ txt: "qweqweqwe" }}
+      // loading="lazy"
     />
     <span>{slice.primary.caption}</span>
   </section>

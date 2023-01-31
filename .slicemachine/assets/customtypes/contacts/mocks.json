@@ -1,0 +1,12 @@
+{
+  "address": {
+    "__TYPE__": "FieldContent",
+    "value": "sport",
+    "type": "Text"
+  },
+  "phone": {
+    "__TYPE__": "FieldContent",
+    "value": "butter",
+    "type": "Text"
+  }
+}
