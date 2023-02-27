@@ -47,6 +47,7 @@
   --md-sys-color-scrim: var(--md-sys-color-scrim-light);
 
   --md-sys-color-primary-rgb: 83 102 0;
+  --md-sys-color-shadow-rgb: 83 102 0;
 
   --md-sys-color-surface-1: rgb(var(--md-sys-color-primary-rgb) / 0.05);
   --md-sys-color-surface-2: rgb(var(--md-sys-color-primary-rgb) / 0.08);

@@ -31,6 +31,6 @@
   "devDependencies": {
     "@prismicio/types": "^0.2.7",
     "schema-dts": "^1.1.0",
-    "slice-machine-ui": "^0.6.1"
+    "slice-machine-ui": "^0.7.0"
   }
 }

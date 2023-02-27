@@ -3,7 +3,13 @@
     "ImageTextButtonsTwoCols": {
       "default": {
         "primary": {}
+      },
+      "leftImageTextButtonsTwoCols": {
+        "primary": {}
       }
     }
+  },
+  "_cts": {
+    "config": {}
   }
 }

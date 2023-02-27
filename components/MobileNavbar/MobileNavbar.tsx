@@ -1,6 +1,5 @@
-import { ILink, ILinkWithIcon } from "../../interfaces";
+import { ILinkWithIcon } from "../../interfaces";
 import { MobileNavItem } from "../MobileNavItem/MobileNavItem";
-import { NavItem } from "../NavItem/NavItem";
 import styles from "./index.module.css";
 
 interface INavbar {
@@ -19,7 +18,6 @@ export const MobileNavbar = ({ links }: INavbar) => {
               title={item.title}
               icon={item.icon}
             />
-            // <div key={item.link}>{item.title}</div>
           ))}
         </ul>
       </nav>

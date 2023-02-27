@@ -63,6 +63,30 @@ interface CardDocumentData {
  * @typeParam Lang - Language API ID of the document.
  */
 export type CardDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<CardDocumentData>, "card", Lang>;
+/** Content for Config documents */
+interface ConfigDocumentData {
+    /**
+     * logo field in *Config*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: config.logo
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    logo: prismicT.ImageField<never>;
+}
+/**
+ * Config document from Prismic
+ *
+ * - **API ID**: `config`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ConfigDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<ConfigDocumentData>, "config", Lang>;
 /** Content for Contacts documents */
 interface ContactsDocumentData {
     /**
@@ -271,7 +295,7 @@ type PageDocumentDataSlicesSlice = TextSlice | ImageWithCaptionSlice | PageHeade
  * @typeParam Lang - Language API ID of the document.
  */
 export type PageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
-export type AllDocumentTypes = CardDocument | ContactsDocument | MenuDocument | PageDocument;
+export type AllDocumentTypes = CardDocument | ConfigDocument | ContactsDocument | MenuDocument | PageDocument;
 /**
  * Item in Cards → Items
  *
@@ -714,29 +738,6 @@ type PageHeaderSliceVariation = PageHeaderSliceDefault;
  */
 export type PageHeaderSlice = prismicT.SharedSlice<"page_header", PageHeaderSliceVariation>;
 /**
- * Default variation for Services Slice
- *
- * - **API ID**: `default`
- * - **Description**: `Services`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type ServicesSliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, never>;
-/**
- * Slice variation for *Services*
- *
- */
-type ServicesSliceVariation = ServicesSliceDefault;
-/**
- * Services Shared Slice
- *
- * - **API ID**: `services`
- * - **Description**: `Services`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type ServicesSlice = prismicT.SharedSlice<"services", ServicesSliceVariation>;
-/**
  * Primary content in Text → Primary
  *
  */
@@ -819,6 +820,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { CardDocumentData, CardDocument, ContactsDocumentData, ContactsDocument, MenuDocumentData, MenuDocumentDataMenuitemItem, MenuDocument, PageDocumentData, PageDocumentDataMetaItem, PageDocumentDataUrlItem, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, CardsSliceDefaultItem, CardsSliceDefault, CardsSliceVariation, CardsSlice, FaqSliceDefaultItem, FaqSliceDefault, FaqSliceVariation, FaqSlice, HeaderWithLinkSliceDefaultPrimary, HeaderWithLinkSliceDefault, HeaderWithLinkSliceVariation, HeaderWithLinkSlice, ImageTextButtonsTwoColsSliceDefaultPrimary, ImageTextButtonsTwoColsSliceDefaultItem, ImageTextButtonsTwoColsSliceDefault, ImageTextButtonsTwoColsSliceLeftImageTextButtonsTwoColsPrimary, ImageTextButtonsTwoColsSliceLeftImageTextButtonsTwoColsItem, ImageTextButtonsTwoColsSliceLeftImageTextButtonsTwoCols, ImageTextButtonsTwoColsSliceVariation, ImageTextButtonsTwoColsSlice, ImageWithCaptionSliceDefaultPrimary, ImageWithCaptionSliceDefault, ImageWithCaptionSliceVariation, ImageWithCaptionSlice, PageHeaderSliceDefaultPrimary, PageHeaderSliceDefault, PageHeaderSliceVariation, PageHeaderSlice, ServicesSliceDefault, ServicesSliceVariation, ServicesSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice, VideoSliceDefaultPrimary, VideoSliceDefault, VideoSliceVariation, VideoSlice };
+        export type { CardDocumentData, CardDocument, ConfigDocumentData, ConfigDocument, ContactsDocumentData, ContactsDocument, MenuDocumentData, MenuDocumentDataMenuitemItem, MenuDocument, PageDocumentData, PageDocumentDataMetaItem, PageDocumentDataUrlItem, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, CardsSliceDefaultItem, CardsSliceDefault, CardsSliceVariation, CardsSlice, FaqSliceDefaultItem, FaqSliceDefault, FaqSliceVariation, FaqSlice, HeaderWithLinkSliceDefaultPrimary, HeaderWithLinkSliceDefault, HeaderWithLinkSliceVariation, HeaderWithLinkSlice, ImageTextButtonsTwoColsSliceDefaultPrimary, ImageTextButtonsTwoColsSliceDefaultItem, ImageTextButtonsTwoColsSliceDefault, ImageTextButtonsTwoColsSliceLeftImageTextButtonsTwoColsPrimary, ImageTextButtonsTwoColsSliceLeftImageTextButtonsTwoColsItem, ImageTextButtonsTwoColsSliceLeftImageTextButtonsTwoCols, ImageTextButtonsTwoColsSliceVariation, ImageTextButtonsTwoColsSlice, ImageWithCaptionSliceDefaultPrimary, ImageWithCaptionSliceDefault, ImageWithCaptionSliceVariation, ImageWithCaptionSlice, PageHeaderSliceDefaultPrimary, PageHeaderSliceDefault, PageHeaderSliceVariation, PageHeaderSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice, VideoSliceDefaultPrimary, VideoSliceDefault, VideoSliceVariation, VideoSlice };
     }
 }

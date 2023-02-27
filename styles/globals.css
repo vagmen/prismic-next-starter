@@ -9,8 +9,11 @@
   --font-size-m: 16px;
   --font-size-l: 20px;
   --font-size-xl: 24px;
-  --font-size-xxl: 36px;
-  --font-size-xxxl: 72px;
+  --font-size-xxl: 28px;
+  --font-size-xxxl: 32px;
+  --font-size-xxxxl: 36px;
+  --font-size-xxxxxl: 48px;
+  --font-size-xxxxxxl: 72px;
 
   --gap-s: 8px;
   --gap-m: 16px;
@@ -22,7 +25,7 @@
 
   --page-padding: var(--gap-m);
   --section-gap: var(--gap-m);
-  --content-gap: var(--gap-s);
+  --content-gap: var(--gap-m);
 
   --breakpoint-s: 600px;
   --breakpoint-m: 1200px;
@@ -70,10 +73,15 @@ a {
 html {
   width: 100%;
   height: 100vh;
-  /* overflow-x: hidden; */
-  font-size: 16px;
+  font-size: var(--font-size-m);
   font-family: Rubik, sans-serif;
   color: rgba(0, 0, 0, 0.87);
+}
+
+button {
+  font-family: Rubik, sans-serif;
+  font-size: 16px;
+  line-height: 16px;
 }
 
 body {
@@ -81,15 +89,15 @@ body {
 }
 
 h1 {
-  font-size: var(--font-size-xxl);
+  font-size: var(--font-size-xxxxl);
 }
 
 h2 {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-xxxl);
 }
 
 h3 {
-  font-size: var(--font-size-l);
+  font-size: var(--font-size-xxl);
 }
 
 @media (min-width: 600px) {
@@ -97,22 +105,41 @@ h3 {
     --page-padding: var(--gap-l);
     --section-gap: var(--gap-xl);
   }
+  html {
+    font-size: var(--font-size-l);
+  }
+  h1 {
+    font-size: var(--font-size-xxxxxl);
+  }
+
+  h2 {
+    font-size: var(--font-size-xxxxl);
+  }
+
+  h3 {
+    font-size: var(--font-size-xxxl);
+  }
 }
 
 @media (min-width: 1200px) {
   :root {
     --page-padding: var(--gap-xl);
     --section-gap: var(--gap-xxl);
-    --content-gap: var(--gap-m);
+    --content-gap: var(--gap-l);
+  }
+  html {
+    font-size: var(--font-size-l);
   }
   h1 {
-    font-size: var(--font-size-xxxl);
+    font-size: var(--font-size-xxxxxxl);
   }
+
   h2 {
-    font-size: var(--font-size-xxl);
+    font-size: var(--font-size-xxxxxl);
   }
+
   h3 {
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-xxxxl);
   }
 }
 
@@ -120,15 +147,21 @@ h3 {
   :root {
     --page-padding: var(--gap-xxl);
     --section-gap: var(--gap-xxl);
+    --content-gap: var(--gap-xl);
+  }
+  html {
+    font-size: var(--font-size-xl);
   }
   h1 {
-    font-size: var(--font-size-xxxl);
+    font-size: var(--font-size-xxxxxxl);
   }
+
   h2 {
-    font-size: var(--font-size-xxl);
+    font-size: var(--font-size-xxxxxl);
   }
+
   h3 {
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-xxxxl);
   }
 }
 
@@ -137,15 +170,18 @@ h3 {
     --page-padding: var(--gap-xxxl);
     --section-gap: var(--gap-xxxl);
   }
+  html {
+    font-size: var(--font-size-xl);
+  }
   h1 {
-    font-size: var(--font-size-xxxl);
+    font-size: var(--font-size-xxxxxxl);
   }
 
   h2 {
-    font-size: var(--font-size-xxl);
+    font-size: var(--font-size-xxxxxl);
   }
 
   h3 {
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-xxxxl);
   }
 }

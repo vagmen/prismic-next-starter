@@ -1,0 +1,319 @@
+{
+  "slices": {
+    "components": {
+      "header_with_link": {
+        "library": "slices",
+        "id": "header_with_link",
+        "name": "HeaderWithLink",
+        "description": "HeaderWithLink",
+        "model": {
+          "id": "header_with_link",
+          "type": "SharedSlice",
+          "name": "HeaderWithLink",
+          "description": "HeaderWithLink",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "HeaderWithLink",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                },
+                "link": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Link",
+                    "placeholder": "",
+                    "select": null
+                  }
+                },
+                "linktitle": {
+                  "type": "Text",
+                  "config": {
+                    "label": "LinkTitle",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Shallow",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Nostrud ea eiusmod laboris nisi eu aliqua in ipsum. Nostrud tempor veniam ipsum officia id do excepteur. Tempor laborum ut Lorem dolor est cupidatat ipsum cillum.",
+                  "spans": []
+                }
+              ],
+              "link": {
+                "link_type": "Web",
+                "url": "https://slicemachine.dev"
+              },
+              "linktitle": "pony"
+            },
+            "slice_type": "header_with_link"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "D:\\projects\\vagmen1\\.slicemachine\\assets\\slices\\HeaderWithLink\\default\\preview.png",
+            "width": 1280,
+            "height": 800
+          }
+        }
+      },
+      "image_with_caption": {
+        "library": "slices",
+        "id": "image_with_caption",
+        "name": "ImageWithCaption",
+        "description": "ImageWithCaption",
+        "model": {
+          "id": "image_with_caption",
+          "type": "SharedSlice",
+          "name": "ImageWithCaption",
+          "description": "ImageWithCaption",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "ImageWithCaption",
+              "primary": {
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "caption": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Caption",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f"
+              },
+              "caption": "afternoon"
+            },
+            "slice_type": "image_with_caption"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "D:\\projects\\vagmen1\\.slicemachine\\assets\\slices\\ImageWithCaption\\default\\preview.png",
+            "width": 1280,
+            "height": 800
+          }
+        }
+      },
+      "page_header": {
+        "library": "slices",
+        "id": "page_header",
+        "name": "PageHeader",
+        "description": "PageHeader",
+        "model": {
+          "id": "page_header",
+          "type": "SharedSlice",
+          "name": "PageHeader",
+          "description": "PageHeader",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "PageHeader",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
+              "items": {}
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Dirty",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Id consectetur nisi adipisicing.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "page_header"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "D:\\projects\\vagmen1\\.slicemachine\\assets\\slices\\PageHeader\\default\\preview.png",
+            "width": 1280,
+            "height": 800
+          }
+        }
+      },
+      "text": {
+        "library": "slices",
+        "id": "text",
+        "name": "Text",
+        "description": "Text",
+        "model": {
+          "id": "text",
+          "type": "SharedSlice",
+          "name": "Text",
+          "description": "Text",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Text",
+              "primary": {
+                "content": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Content",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "text": "Exercitation ea commodo irure cillum incididunt adipisicing.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "text"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "D:\\projects\\vagmen1\\.slicemachine\\assets\\slices\\Text\\default\\preview.png",
+            "width": 1280,
+            "height": 800
+          }
+        }
+      }
+    }
+  }
+}

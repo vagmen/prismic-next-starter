@@ -7,10 +7,12 @@
         "__TYPE__": "StructuredTextContent",
         "value": [
           {
-            "type": "heading2",
+            "type": "heading1",
             "content": {
-              "text": "Shadow"
-            }
+              "text": "Заголовок",
+              "spans": []
+            },
+            "direction": "ltr"
           }
         ]
       },
@@ -20,7 +22,7 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Какое-то описание. Do velit qui esse minim magna veniam.",
+              "text": "Какое-то описание. Do velit qui esse minim magna veniam. Do velit qui esse minim magna veniam. Do velit qui esse minim magna veniam. Do velit qui esse minim magna veniam.",
               "spans": []
             },
             "direction": "ltr"

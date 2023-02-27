@@ -3,33 +3,33 @@
     "__TYPE__": "SharedSliceContent",
     "variation": "default",
     "primary": {
+      "caption": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "Описание под картинкой"
+      },
       "image": {
+        "url": "https://images.unsplash.com/photo-1584559582128-b8be739912e1?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMzc0NjN8MHwxfHNlYXJjaHwxMXx8ZnJ1aXR8ZW58MHx8fHwxNjc1NDI2NjM3&ixlib=rb-4.0.3&q=80&rect=0%2C0%2C3710%2C3710&w=3710&h=3710",
         "origin": {
-          "id": "main",
-          "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e",
-          "width": 6000,
-          "height": 4000
+          "id": "h5yMpgOI5nI",
+          "url": "https://images.unsplash.com/photo-1584559582128-b8be739912e1?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMzc0NjN8MHwxfHNlYXJjaHwxMXx8ZnJ1aXR8ZW58MHx8fHwxNjc1NDI2NjM3&ixlib=rb-4.0.3&q=80",
+          "width": 3710,
+          "height": 3710
         },
-        "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e",
-        "width": 6000,
-        "height": 4000,
+        "width": 3710,
+        "height": 3710,
         "edit": {
+          "background": "transparent",
           "zoom": 1,
           "crop": {
             "x": 0,
             "y": 0
-          },
-          "background": "transparent"
+          }
         },
         "credits": null,
         "alt": null,
         "__TYPE__": "ImageContent",
         "thumbnails": {}
-      },
-      "caption": {
-        "__TYPE__": "FieldContent",
-        "type": "Text",
-        "value": "Описание под картинкой"
       }
     },
     "items": [

@@ -6,7 +6,6 @@ import HeaderWithLink from './HeaderWithLink';
 import ImageTextButtonsTwoCols from './ImageTextButtonsTwoCols';
 import ImageWithCaption from './ImageWithCaption';
 import PageHeader from './PageHeader';
-import Services from './Services';
 import Text from './Text';
 import Video from './Video';
 
@@ -17,7 +16,6 @@ export {
 	ImageTextButtonsTwoCols,
 	ImageWithCaption,
 	PageHeader,
-	Services,
 	Text,
 	Video,
 };
@@ -29,7 +27,6 @@ export const components = {
 	image_text_buttons_two_cols: ImageTextButtonsTwoCols,
 	image_with_caption: ImageWithCaption,
 	page_header: PageHeader,
-	services: Services,
 	text: Text,
 	video: Video,
 };

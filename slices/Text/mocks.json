@@ -7,10 +7,60 @@
         "__TYPE__": "StructuredTextContent",
         "value": [
           {
+            "type": "heading2",
+            "content": {
+              "text": "Заголовок.",
+              "spans": []
+            },
+            "direction": "ltr"
+          },
+          {
             "type": "paragraph",
             "content": {
-              "text": "Mollit ad aute elit cillum Lorem consectetur pariatur et."
-            }
+              "text": "Mollit ad aute elit cillum Lorem consectetur pariatur et.",
+              "spans": []
+            },
+            "direction": "ltr"
+          },
+          {
+            "type": "heading3",
+            "content": {
+              "text": "Подзаголовок.",
+              "spans": []
+            },
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Дальше добавляем список:",
+              "spans": []
+            },
+            "direction": "ltr"
+          },
+          {
+            "type": "list-item",
+            "content": {
+              "text": "Первый пункт",
+              "spans": []
+            },
+            "direction": "ltr"
+          },
+          {
+            "type": "list-item",
+            "content": {
+              "text": "Второй пункт",
+              "spans": []
+            },
+            "direction": "ltr"
+          },
+          {
+            "type": "list-item",
+            "content": {
+              "text": "Третий",
+              "spans": []
+            },
+            "direction": "ltr"
           }
         ]
       }

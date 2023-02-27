@@ -1,0 +1,18 @@
+{
+  "id": "config",
+  "label": "Config",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "logo": {
+        "type": "Image",
+        "config": {
+          "label": "logo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      }
+    }
+  }
+}

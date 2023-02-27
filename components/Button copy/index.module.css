@@ -1,0 +1,26 @@
+.button {
+  padding: 10px 24px;
+  border-radius: 100px;
+  display: inline-block;
+  background: var(--md-sys-color-surface-1);
+  color: var(--md-sys-color-on-surface);
+  width: auto;
+  font-size: var(--font-size-l);
+  line-height: var(--font-size-l);
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--md-sys-color-surface-2);
+}
+
+.filled {
+  background: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  box-shadow: var(--md-sys-elevation-0);
+}
+
+.filled:hover {
+  box-shadow: var(--md-sys-elevation-1);
+  background: var(--md-sys-color-primary);
+}
