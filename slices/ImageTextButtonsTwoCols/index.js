@@ -1,10 +1,8 @@
-import React from "react";
 import { PrismicRichText } from "@prismicio/react";
 import styles from "./styles.module.css";
 import { PrismicNextImage } from "@prismicio/next";
 import classNames from "classnames";
 import { Link } from "../../components/Link/Link";
-import { Button } from "../../components/Button/Button";
 
 /**
  * @typedef {import("@prismicio/client").Content.ImageTextButtonsTwoColsSlice} ImageTextButtonsTwoColsSlice
@@ -19,7 +17,7 @@ const ImageTextButtonsTwoCols = ({ slice }) => {
   return (
     <section
       className={classNames(styles.section, {
-        [styles.revers]: slice.variation === "leftImageTextButtonsTwoCols",
+        [styles.revers]: slice.primary.imageleft,
         [styles.topMargin]: withTopMargin,
       })}
     >
@@ -28,10 +26,9 @@ const ImageTextButtonsTwoCols = ({ slice }) => {
         <PrismicRichText field={slice.primary.description} />
         <div className={styles.actions}>
           {slice.items.map((item) => (
-            // <Link key={item.title} link={item.link}>
-            //   {item.title}
-            // </Link>
-            <Button key={item.title}>{item.title}</Button>
+            <Link key={item.title} href={item.link} variant={item.variant}>
+              {item.title}
+            </Link>
           ))}
         </div>
       </div>
@@ -41,7 +38,6 @@ const ImageTextButtonsTwoCols = ({ slice }) => {
           className={styles.image}
           alt=""
         />
-        {/* </div> */}
       </div>
     </section>
   );

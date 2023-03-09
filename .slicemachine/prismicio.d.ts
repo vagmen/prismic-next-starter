@@ -593,6 +593,17 @@ interface ImageTextButtonsTwoColsSliceDefaultPrimary {
      *
      */
     image: prismicT.ImageField<never>;
+    /**
+     * imageLeft field in *ImageTextButtonsTwoCols → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: image_text_buttons_two_cols.primary.imageleft
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    imageleft: prismicT.BooleanField;
 }
 /**
  * Item in ImageTextButtonsTwoCols → Items
@@ -619,6 +630,16 @@ export interface ImageTextButtonsTwoColsSliceDefaultItem {
      *
      */
     link: prismicT.KeyTextField;
+    /**
+     * variant field in *ImageTextButtonsTwoCols → Items*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: *None*
+     * - **API ID Path**: image_text_buttons_two_cols.items[].variant
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    variant: prismicT.SelectField<"filled" | "filledTonal" | "outlined" | "text" | "underscored">;
 }
 /**
  * Default variation for ImageTextButtonsTwoCols Slice

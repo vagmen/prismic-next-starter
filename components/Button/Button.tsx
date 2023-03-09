@@ -2,7 +2,7 @@ import useWindowSize from "../../hooks/useWindowSize";
 import styles from "./index.module.css";
 import classNames from "classnames";
 
-type ButtonVariant = "filled" | "filledTonal" | "outlined" | "text";
+export type ButtonVariant = "filled" | "filledTonal" | "outlined" | "text";
 
 interface IButton {
   children: string;

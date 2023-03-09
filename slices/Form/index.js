@@ -14,7 +14,13 @@ const Form = ({ slice }) => (
       {slice?.items?.map((item, i) => (
         <div key={i} className={styles.control}>
           <span>{item.title}</span>
-          <input value="sdfsdfsdf" className={styles.input} />
+          <input
+            value="sdfsdfsdf"
+            className={styles.input}
+            onChange={() => {
+              //
+            }}
+          />
           {/* <div dangerouslySetInnerHTML={{ __html: item.sliceexample.html }} /> */}
         </div>
       ))}

@@ -12,13 +12,7 @@ export const Navbar = ({ links }: INavbar) => {
       <nav className={styles.nav}>
         <ul className={styles.ul}>
           {links.map((item) => (
-            <NavItem
-              key={item.link}
-              link={item.link}
-              title={item.title}
-              href={item.href}
-            />
-            // <div key={item.link}>{item.title}</div>
+            <NavItem key={item.link} href={item.link} title={item.title} />
           ))}
         </ul>
       </nav>
