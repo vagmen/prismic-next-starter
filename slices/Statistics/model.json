@@ -1,30 +1,28 @@
 {
-  "id": "faq",
+  "id": "statistics",
   "type": "SharedSlice",
-  "name": "Faq",
-  "description": "Faq",
+  "name": "Statistics",
+  "description": "Statistics",
   "variations": [
     {
       "id": "default",
       "name": "Default",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
-      "description": "Faq",
+      "description": "Statistics",
       "primary": {},
       "items": {
-        "answer": {
-          "type": "StructuredText",
-          "config": {
-            "label": "answer",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-          }
-        },
-        "question": {
+        "value": {
           "type": "Text",
           "config": {
-            "label": "question",
+            "label": "value",
+            "placeholder": ""
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "description",
             "placeholder": ""
           }
         }

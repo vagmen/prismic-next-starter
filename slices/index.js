@@ -2,20 +2,24 @@
 
 import Cards from './Cards';
 import Faq from './Faq';
+import Form from './Form';
 import HeaderWithLink from './HeaderWithLink';
 import ImageTextButtonsTwoCols from './ImageTextButtonsTwoCols';
 import ImageWithCaption from './ImageWithCaption';
 import PageHeader from './PageHeader';
+import Statistics from './Statistics';
 import Text from './Text';
 import Video from './Video';
 
 export {
 	Cards,
 	Faq,
+	Form,
 	HeaderWithLink,
 	ImageTextButtonsTwoCols,
 	ImageWithCaption,
 	PageHeader,
+	Statistics,
 	Text,
 	Video,
 };
@@ -23,10 +27,12 @@ export {
 export const components = {
 	cards: Cards,
 	faq: Faq,
+	form: Form,
 	header_with_link: HeaderWithLink,
 	image_text_buttons_two_cols: ImageTextButtonsTwoCols,
 	image_with_caption: ImageWithCaption,
 	page_header: PageHeader,
+	statistics: Statistics,
 	text: Text,
 	video: Video,
 };

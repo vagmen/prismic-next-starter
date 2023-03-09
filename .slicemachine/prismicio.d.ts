@@ -284,7 +284,7 @@ export interface PageDocumentDataUrlItem {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = TextSlice | ImageWithCaptionSlice | PageHeaderSlice | HeaderWithLinkSlice | CardsSlice | FaqSlice | ImageTextButtonsTwoColsSlice | VideoSlice;
+type PageDocumentDataSlicesSlice = TextSlice | ImageWithCaptionSlice | PageHeaderSlice | HeaderWithLinkSlice | CardsSlice | FaqSlice | ImageTextButtonsTwoColsSlice | VideoSlice | StatisticsSlice | FormSlice;
 /**
  * Page document from Prismic
  *
@@ -371,16 +371,6 @@ export type CardsSlice = prismicT.SharedSlice<"cards", CardsSliceVariation>;
  */
 export interface FaqSliceDefaultItem {
     /**
-     * question field in *Faq → Items*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: faq.items[].question
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    question: prismicT.RichTextField;
-    /**
      * answer field in *Faq → Items*
      *
      * - **Field Type**: Rich Text
@@ -390,6 +380,16 @@ export interface FaqSliceDefaultItem {
      *
      */
     answer: prismicT.RichTextField;
+    /**
+     * question field in *Faq → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: faq.items[].question
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    question: prismicT.KeyTextField;
 }
 /**
  * Default variation for Faq Slice
@@ -414,6 +414,81 @@ type FaqSliceVariation = FaqSliceDefault;
  *
  */
 export type FaqSlice = prismicT.SharedSlice<"faq", FaqSliceVariation>;
+/**
+ * Primary content in Form → Primary
+ *
+ */
+interface FormSliceDefaultPrimary {
+    /**
+     * buttonTitle field in *Form → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: form.primary.buttontitle
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    buttontitle: prismicT.KeyTextField;
+    /**
+     * buttonVariant field in *Form → Primary*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: *None*
+     * - **API ID Path**: form.primary.buttonvariant
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    buttonvariant: prismicT.SelectField<"filled" | "filledTonal" | "outlined" | "text">;
+}
+/**
+ * Item in Form → Items
+ *
+ */
+export interface FormSliceDefaultItem {
+    /**
+     * title field in *Form → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: form.items[].title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
+     * sliceExample field in *Form → Items*
+     *
+     * - **Field Type**: Embed
+     * - **Placeholder**: *None*
+     * - **API ID Path**: form.items[].sliceexample
+     * - **Documentation**: https://prismic.io/docs/core-concepts/embed
+     *
+     */
+    sliceexample: prismicT.EmbedField;
+}
+/**
+ * Default variation for Form Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Form`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type FormSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<FormSliceDefaultPrimary>, Simplify<FormSliceDefaultItem>>;
+/**
+ * Slice variation for *Form*
+ *
+ */
+type FormSliceVariation = FormSliceDefault;
+/**
+ * Form Shared Slice
+ *
+ * - **API ID**: `form`
+ * - **Description**: `Form`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type FormSlice = prismicT.SharedSlice<"form", FormSliceVariation>;
 /**
  * Primary content in HeaderWithLink → Primary
  *
@@ -738,6 +813,55 @@ type PageHeaderSliceVariation = PageHeaderSliceDefault;
  */
 export type PageHeaderSlice = prismicT.SharedSlice<"page_header", PageHeaderSliceVariation>;
 /**
+ * Item in Statistics → Items
+ *
+ */
+export interface StatisticsSliceDefaultItem {
+    /**
+     * value field in *Statistics → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: statistics.items[].value
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    value: prismicT.KeyTextField;
+    /**
+     * description field in *Statistics → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: statistics.items[].description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    description: prismicT.KeyTextField;
+}
+/**
+ * Default variation for Statistics Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Statistics`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type StatisticsSliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, Simplify<StatisticsSliceDefaultItem>>;
+/**
+ * Slice variation for *Statistics*
+ *
+ */
+type StatisticsSliceVariation = StatisticsSliceDefault;
+/**
+ * Statistics Shared Slice
+ *
+ * - **API ID**: `statistics`
+ * - **Description**: `Statistics`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type StatisticsSlice = prismicT.SharedSlice<"statistics", StatisticsSliceVariation>;
+/**
  * Primary content in Text → Primary
  *
  */
@@ -820,6 +944,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { CardDocumentData, CardDocument, ConfigDocumentData, ConfigDocument, ContactsDocumentData, ContactsDocument, MenuDocumentData, MenuDocumentDataMenuitemItem, MenuDocument, PageDocumentData, PageDocumentDataMetaItem, PageDocumentDataUrlItem, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, CardsSliceDefaultItem, CardsSliceDefault, CardsSliceVariation, CardsSlice, FaqSliceDefaultItem, FaqSliceDefault, FaqSliceVariation, FaqSlice, HeaderWithLinkSliceDefaultPrimary, HeaderWithLinkSliceDefault, HeaderWithLinkSliceVariation, HeaderWithLinkSlice, ImageTextButtonsTwoColsSliceDefaultPrimary, ImageTextButtonsTwoColsSliceDefaultItem, ImageTextButtonsTwoColsSliceDefault, ImageTextButtonsTwoColsSliceLeftImageTextButtonsTwoColsPrimary, ImageTextButtonsTwoColsSliceLeftImageTextButtonsTwoColsItem, ImageTextButtonsTwoColsSliceLeftImageTextButtonsTwoCols, ImageTextButtonsTwoColsSliceVariation, ImageTextButtonsTwoColsSlice, ImageWithCaptionSliceDefaultPrimary, ImageWithCaptionSliceDefault, ImageWithCaptionSliceVariation, ImageWithCaptionSlice, PageHeaderSliceDefaultPrimary, PageHeaderSliceDefault, PageHeaderSliceVariation, PageHeaderSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice, VideoSliceDefaultPrimary, VideoSliceDefault, VideoSliceVariation, VideoSlice };
+        export type { CardDocumentData, CardDocument, ConfigDocumentData, ConfigDocument, ContactsDocumentData, ContactsDocument, MenuDocumentData, MenuDocumentDataMenuitemItem, MenuDocument, PageDocumentData, PageDocumentDataMetaItem, PageDocumentDataUrlItem, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, CardsSliceDefaultItem, CardsSliceDefault, CardsSliceVariation, CardsSlice, FaqSliceDefaultItem, FaqSliceDefault, FaqSliceVariation, FaqSlice, FormSliceDefaultPrimary, FormSliceDefaultItem, FormSliceDefault, FormSliceVariation, FormSlice, HeaderWithLinkSliceDefaultPrimary, HeaderWithLinkSliceDefault, HeaderWithLinkSliceVariation, HeaderWithLinkSlice, ImageTextButtonsTwoColsSliceDefaultPrimary, ImageTextButtonsTwoColsSliceDefaultItem, ImageTextButtonsTwoColsSliceDefault, ImageTextButtonsTwoColsSliceLeftImageTextButtonsTwoColsPrimary, ImageTextButtonsTwoColsSliceLeftImageTextButtonsTwoColsItem, ImageTextButtonsTwoColsSliceLeftImageTextButtonsTwoCols, ImageTextButtonsTwoColsSliceVariation, ImageTextButtonsTwoColsSlice, ImageWithCaptionSliceDefaultPrimary, ImageWithCaptionSliceDefault, ImageWithCaptionSliceVariation, ImageWithCaptionSlice, PageHeaderSliceDefaultPrimary, PageHeaderSliceDefault, PageHeaderSliceVariation, PageHeaderSlice, StatisticsSliceDefaultItem, StatisticsSliceDefault, StatisticsSliceVariation, StatisticsSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice, VideoSliceDefaultPrimary, VideoSliceDefault, VideoSliceVariation, VideoSlice };
     }
 }

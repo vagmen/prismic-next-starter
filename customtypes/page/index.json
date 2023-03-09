@@ -84,6 +84,12 @@
             },
             "video": {
               "type": "SharedSlice"
+            },
+            "statistics": {
+              "type": "SharedSlice"
+            },
+            "form": {
+              "type": "SharedSlice"
             }
           }
         }

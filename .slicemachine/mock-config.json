@@ -7,9 +7,25 @@
       "leftImageTextButtonsTwoCols": {
         "primary": {}
       }
+    },
+    "Statistics": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Faq": {
+      "default": {
+        "items": {}
+      }
+    },
+    "Form": {
+      "default": {
+        "primary": {}
+      }
     }
   },
   "_cts": {
-    "config": {}
+    "config": {},
+    "page": {}
   }
 }
